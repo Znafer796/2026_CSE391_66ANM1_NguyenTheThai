@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Điểm Sinh Viên</title>
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Table borders and structure */
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        /* Body background */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        /* Header cells */
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        
+        /* Table container */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* Label rows */
+        .column-labels {
+            background-color: #e9ecef;
+        }
+        
+        /* Student header cell */
+        .student-header {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main data table -->
+    <table>
+        <thead>
+            <!-- Header row 1: Main categories -->
+            <tr>
+                <th colspan="2" rowspan="2" class="student-header">Student</th>
+                <th colspan="4">Exam</th>
+                <th colspan="4">2nd Exam</th>
+                <th colspan="2" rowspan="2">Final Grade</th>
+            </tr>
+            <!-- Header row 2: Question labels -->
+            <tr class="column-labels">
+                <th>Q1</th>
+                <th>Q2</th>
+                <th>Q3</th>
+                <th>Grade</th>
+                <th>Q1</th>
+                <th>Q2</th>
+                <th>Q3</th>
+                <th>Grade</th>
+            </tr>
+            <!-- Header row 3: Weight values -->
+            <tr class="column-labels">
+                <th>Code</th>
+                <th>Name</th>
+                <th>8</th>
+                <th>7</th>
+                <th>5</th>
+                <th></th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th></th>
+                <th>NR</th>
+                <th>R</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Student 1: John -->
+            <tr>
+                <td>80549001</td>
+                <td>John</td>
+                <td>70%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>17.6</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>17.6</td>
+                <td>18</td>
+            </tr>
+            <!-- Student 2: Mary -->
+            <tr>
+                <td>80549002</td>
+                <td>Mary</td>
+                <td>10%</td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>6.8</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>50%</td>
+                <td>16.5</td>
+                <td>16.5</td>
+                <td>17</td>
+            </tr>
+            <!-- Student 3: Claire -->
+            <tr>
+                <td>80549003</td>
+                <td>Claire</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>10.0</td>
+                <td>10.0</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
