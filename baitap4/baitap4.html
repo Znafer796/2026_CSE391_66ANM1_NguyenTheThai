@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form - BÀI TẬP 04 (Version 2)</title>
+    <link rel="stylesheet" href="#styles">
+</head>
+<body>
+    <main class="form-wrapper">
+        <form id="employeeForm" method="POST" action="#">
+            <!-- Section 1: Basic Information -->
+            <section class="form-section">
+                <h2 class="section-title">Basic Info</h2>
+                
+                <fieldset class="field-container">
+                    <div class="input-row">
+                        <span class="field-label">Employee ID</span>
+                        <input class="text-input" type="text" name="employee-id" id="empId">
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">Last Name</span>
+                        <input class="text-input" type="text" name="last-name" id="lastName" value="Quochoach" required>
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">First Name</span>
+                        <input class="text-input" type="text" name="first-name" id="firstName" value="Anne">
+                        <span class="hint-icon" data-tooltip="Enter your first name">ⓘ</span>
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">Gender</span>
+                        <div class="radio-container">
+                            <label class="radio-label">
+                                <input class="radio-input" type="radio" name="gender" value="male" checked>
+                                <span>Male</span>
+                            </label>
+                            <label class="radio-label">
+                                <input class="radio-input" type="radio" name="gender" value="female">
+                                <span>Female</span>
+                            </label>
+                            <label class="radio-label">
+                                <input class="radio-input" type="radio" name="gender" value="xxx">
+                                <span>XXX</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">Title</span>
+                        <input class="text-input" type="text" name="title" id="jobTitle" value="Sales Representative">
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">Suffix</span>
+                        <input class="text-input" type="text" name="suffix" id="nameSuffix" value="Ms.">
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">BirthDate</span>
+                        <input class="text-input" type="date" name="birthdate" id="dob" value="1995-07-12">
+                        <span class="hint-icon" data-tooltip="Select your birth date">ⓘ</span>
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">HireDate</span>
+                        <input class="text-input" type="date" name="hiredate" id="hireDate" value="1993-11-15">
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">SSN or (if applicable)</span>
+                        <input class="text-input" type="text" name="ssn" id="socialSecurity">
+                        <span class="hint-icon" data-tooltip="Social Security Number">ⓘ</span>
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">Reports To</span>
+                        <select class="text-input" name="reports-to" id="manager">
+                            <option value="">Select...</option>
+                            <option value="buchanan" selected>Buchanan</option>
+                            <option value="fuller">Fuller</option>
+                            <option value="leverling">Leverling</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </section>
+
+            <!-- Section 2: Contact Information -->
+            <section class="form-section">
+                <h2 class="section-title">Contact Info</h2>
+                
+                <fieldset class="field-container">
+                    <div class="input-row">
+                        <span class="field-label">Email</span>
+                        <input class="text-input" type="email" name="email" id="emailAddress" placeholder="name@example.com">
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">Address</span>
+                        <input class="text-input" type="text" name="address" id="streetAddress" value="7 Houndstooth Rd.">
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">City</span>
+                        <input class="text-input" type="text" name="city" id="cityName" value="London">
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">Region</span>
+                        <input class="text-input" type="text" name="region" id="regionName">
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">Postal Code</span>
+                        <input class="text-input" type="text" name="postal-code" id="zipCode" value="WG2 7LT">
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">Country</span>
+                        <select class="text-input" name="country" id="countrySelect">
+                            <option value="">Select country...</option>
+                            <option value="uk" selected>Russian Federation</option>
+                            <option value="vietnam">Vietnam</option>
+                            <option value="usa">United States</option>
+                            <option value="france">France</option>
+                        </select>
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">US Home Phone</span>
+                        <input class="text-input" type="tel" name="home-phone" id="homePhone" value="(233)123-2323">
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">Phone</span>
+                        <input class="text-input" type="tel" name="phone" id="mobilePhone" value="(me)100 bmp">
+                    </div>
+                </fieldset>
+            </section>
+
+            <!-- Section 3: Optional Information -->
+            <section class="form-section">
+                <h2 class="section-title">Optional Info</h2>
+                
+                <fieldset class="field-container">
+                    <div class="input-row input-row-vertical">
+                        <span class="field-label">Notes</span>
+                        <div class="editor-wrapper">
+                            <div class="text-toolbar">
+                                <button class="toolbar-btn" type="button" data-action="bold" title="Bold">B</button>
+                                <button class="toolbar-btn" type="button" data-action="italic" title="Italic">I</button>
+                                <button class="toolbar-btn" type="button" data-action="underline" title="Underline">U</button>
+                                <button class="toolbar-btn" type="button" data-action="strike" title="Strikethrough">S</button>
+                                <button class="toolbar-btn" type="button" data-action="left" title="Align Left">≡</button>
+                                <button class="toolbar-btn" type="button" data-action="center" title="Align Center">≡</button>
+                                <button class="toolbar-btn" type="button" data-action="right" title="Align Right">≡</button>
+                                <button class="toolbar-btn" type="button" data-action="ol" title="Numbered List">1.</button>
+                                <button class="toolbar-btn" type="button" data-action="ul" title="Bullet List">•</button>
+                                <button class="toolbar-btn" type="button" data-action="link" title="Link">🔗</button>
+                                <button class="toolbar-btn" type="button" data-action="image" title="Image">🖼</button>
+                                <button class="toolbar-btn" type="button" data-action="table" title="Table">⊞</button>
+                            </div>
+                            <textarea class="text-area" name="notes" id="notesField">Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German ZZZ.</textarea>
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">Preferred Stub</span>
+                        <div class="radio-container">
+                            <label class="radio-label">
+                                <input class="radio-input" type="radio" name="preferred-stub" value="regular" checked>
+                                <span>Regular</span>
+                            </label>
+                            <label class="radio-label">
+                                <input class="radio-input" type="radio" name="preferred-stub" value="grow-acct">
+                                <span>Grow Acct</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">Active?</span>
+                        <label class="checkbox-wrapper">
+                            <input class="checkbox-input" type="checkbox" name="active" id="activeStatus" checked>
+                            <span>Yes</span>
+                        </label>
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label">Are you human?</span>
+                        <div class="captcha-wrapper">
+                            <div class="captcha-display" id="captchaCode">TIDAHO</div>
+                            <a href="#" class="captcha-refresh" id="refreshCaptcha">Click to change</a>
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <span class="field-label"></span>
+                        <input class="text-input" type="text" name="captcha-input" id="captchaInput" placeholder="Enter CAPTCHA">
+                    </div>
+                </fieldset>
+            </section>
+
+            <!-- Form Actions -->
+            <div class="action-buttons">
+                <button class="btn btn-submit" type="submit">✓ Submit</button>
+                <button class="btn btn-cancel" type="reset">✕ Cancel</button>
+            </div>
+
+            <p class="required-notice">
+                <span class="asterisk">*</span> required
+            </p>
+        </form>
+    </main>
+
+    <style>
+        /* Reset and Base Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        /* Main Container */
+        .form-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Section Styles */
+        .form-section {
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 20px 0 15px 0;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #333;
+        }
+
+        .field-container {
+            border: none;
+        }
+
+        /* Input Row Styles */
+        .input-row {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-row-vertical {
+            align-items: flex-start;
+        }
+
+        .field-label {
+            width: 140px;
+            font-size: 14px;
+            color: #333;
+            flex-shrink: 0;
+        }
+
+        /* Text Inputs */
+        .text-input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+
+        .text-input:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        /* Radio Buttons */
+        .radio-container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .radio-input {
+            margin: 0;
+            cursor: pointer;
+        }
+
+        /* Hint Icon */
+        .hint-icon {
+            color: #4CAF50;
+            cursor: help;
+            margin-left: 5px;
+            font-weight: bold;
+        }
+
+        /* Textarea */
+        .text-area {
+            flex: 1;
+            min-height: 80px;
+            resize: vertical;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            width: 100%;
+        }
+
+        .text-area:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        /* Editor Wrapper */
+        .editor-wrapper {
+            flex: 1;
+        }
+
+        /* Text Toolbar */
+        .text-toolbar {
+            margin-bottom: 10px;
+            padding: 5px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .toolbar-btn {
+            padding: 5px 8px;
+            margin-right: 3px;
+            border: 1px solid #999;
+            background-color: white;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .toolbar-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Checkbox */
+        .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .checkbox-input {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        /* CAPTCHA */
+        .captcha-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .captcha-display {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            text-decoration: line-through;
+            color: #666;
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            user-select: none;
+        }
+
+        .captcha-refresh {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .captcha-refresh:hover {
+            text-decoration: underline;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            font-size: 14px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-submit {
+            background-color: #333;
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background-color: #555;
+        }
+
+        .btn-cancel {
+            background-color: #666;
+            color: white;
+        }
+
+        .btn-cancel:hover {
+            background-color: #888;
+        }
+
+        /* Required Notice */
+        .required-notice {
+            font-size: 12px;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        .asterisk {
+            color: red;
+            margin-right: 3px;
+        }
+    </style>
+
+    <script>
+        // Utility function to generate random CAPTCHA
+        function generateCaptcha() {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let result = '';
+            for (let i = 0; i < 6; i++) {
+                result += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return result;
+        }
+
+        // CAPTCHA refresh handler
+        const captchaRefreshBtn = document.getElementById('refreshCaptcha');
+        const captchaDisplay = document.getElementById('captchaCode');
+
+        captchaRefreshBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            captchaDisplay.textContent = generateCaptcha();
+        });
+
+        // Form submission handler
+        const employeeForm = document.getElementById('employeeForm');
+
+        employeeForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get CAPTCHA values
+            const captchaCode = captchaDisplay.textContent;
+            const captchaInput = document.getElementById('captchaInput').value;
+            
+            // Validate CAPTCHA
+            if (captchaInput.toUpperCase() !== captchaCode) {
+                alert('CAPTCHA không đúng! Vui lòng thử lại.');
+                return;
+            }
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const dataObject = {};
+            formData.forEach((value, key) => {
+                dataObject[key] = value;
+            });
+            
+            alert('Form đã được gửi thành công!');
+            console.log('Submitted Data:', dataObject);
+        });
+
+        // Toolbar button handlers (demonstration)
+        const toolbarButtons = document.querySelectorAll('.toolbar-btn');
+        toolbarButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const action = this.getAttribute('data-action');
+                console.log('Toolbar action:', action);
+                // In a real implementation, these would modify the textarea content
+            });
+        });
+    </script>
+</body>
+</html>
