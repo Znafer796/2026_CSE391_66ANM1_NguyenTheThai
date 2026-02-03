@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 02 - Khóa học sắp khai giảng</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background: #f4f6f9;
+        }
+
+        /* ===== TIÊU ĐỀ BÀI TẬP ===== */
+        .exercise-title {
+            background: #bfe9f6;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        /* ===== KHỐI CHÍNH ===== */
+        .container {
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #d32f2f;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* ===== GRID KHÓA HỌC ===== */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* ===== CARD KHÓA HỌC ===== */
+        .course-card {
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .course-content {
+            padding: 15px;
+        }
+
+        .course-title {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .course-desc {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .course-info {
+            font-size: 13px;
+            color: #444;
+        }
+
+        .course-info p {
+            margin: 5px 0;
+        }
+
+        .course-info i {
+            color: #d32f2f;
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NỘI DUNG -->
+    <div class="container">
+
+        <div class="section-header">
+            <i class="fa-solid fa-flag"></i>
+            KHÓA HỌC SẮP KHAI GIẢNG
+        </div>
+
+        <div class="course-grid">
+
+            <!-- CARD 1 -->
+            <div class="course-card">
+                <img src="https://picsum.photos/400/200?1" alt="">
+                <div class="course-content">
+                    <div class="course-title">LẬP TRÌNH VIÊN QUỐC TẾ</div>
+                    <div class="course-desc">
+                        Chương trình đào tạo chuẩn quốc tế, phù hợp cho người mới bắt đầu.
+                    </div>
+                    <div class="course-info">
+                        <p><i class="fa-solid fa-coins"></i> Học phí: 15.000.000 VNĐ</p>
+                        <p><i class="fa-solid fa-calendar-days"></i> Khai giảng: 2/2024</p>
+                        <p><i class="fa-solid fa-clock"></i> Thời lượng: 2.5 năm</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="course-card">
+                <img src="https://picsum.photos/400/200?2" alt="">
+                <div class="course-content">
+                    <div class="course-title">LẬP TRÌNH WEB FULLSTACK</div>
+                    <div class="course-desc">
+                        Học frontend & backend, xây dựng website hoàn chỉnh.
+                    </div>
+                    <div class="course-info">
+                        <p><i class="fa-solid fa-coins"></i> Học phí: 15.000.000 VNĐ</p>
+                        <p><i class="fa-solid fa-calendar-days"></i> Khai giảng: 2/2024</p>
+                        <p><i class="fa-solid fa-clock"></i> Thời lượng: 6 tháng</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="course-card">
+                <img src="https://picsum.photos/400/200?3" alt="">
+                <div class="course-content">
+                    <div class="course-title">LẬP TRÌNH JAVA FULLSTACK</div>
+                    <div class="course-desc">
+                        Phát triển ứng dụng Java Web với Spring Boot.
+                    </div>
+                    <div class="course-info">
+                        <p><i class="fa-solid fa-coins"></i> Học phí: 15.000.000 VNĐ</p>
+                        <p><i class="fa-solid fa-calendar-days"></i> Khai giảng: 2/2024</p>
+                        <p><i class="fa-solid fa-clock"></i> Thời lượng: 8 tháng</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
